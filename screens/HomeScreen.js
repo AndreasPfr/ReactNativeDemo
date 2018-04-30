@@ -17,7 +17,7 @@ export default class HomeScreen extends Component {
       .then(response => {
         this.setState({
           isLoading: false,
-          data: response.data })
+          data: response })
         })
       .catch(error => {
         this.setState({
@@ -42,7 +42,7 @@ export default class HomeScreen extends Component {
               <TouchableOpacity 
               onPress={() => this.props.navigation.push("Detail", item)}
               >
-                <SingleItem data={item} numberOfLikes={item.numberOfLikes} />
+                <SingleItem data={item} />
               </TouchableOpacity>
             }
           />

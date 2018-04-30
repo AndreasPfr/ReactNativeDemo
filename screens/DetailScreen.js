@@ -4,7 +4,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons'
 
 import {getDogs, getDogsAsync} from './../service/FetchData.js'
 
-const { screenWidth } = Dimensions.get('window');
+const screenWidth = Dimensions.get('window').width;
 
 
 export default class HomeScreen extends Component {
